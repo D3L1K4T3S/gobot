@@ -1,7 +1,6 @@
-package tests
+package lexer
 
 import (
-	"gobot/interpretator/lexer"
 	"gobot/interpretator/token"
 	"testing"
 )
@@ -128,7 +127,7 @@ while(x > 10){
 		{token.EOF, ""},
 	}
 
-	l := lexer.NewLexer(input)
+	l := NewLexer(input)
 
 	for i, tt := range tests {
 		tok := l.NextToken()
